@@ -1,0 +1,31 @@
+{
+    "users":[
+
+        {
+        "Nom": "Diop",
+        "Prenom": "Selle",
+        "password":"joeur",
+        "login" : "joueur@gmail.com",
+        "role":"Role_JOUEUR",
+        "Score": 15
+
+
+        },
+
+        {
+            "Nom": "Faye",
+            "Prenom": "Astou",
+            "password":"admin",
+            "login" : "admin@gmail.com",
+            "role":"Role_ADMIN",
+            "Score":0
+    
+    
+            }
+
+    ]
+
+
+
+
+}
