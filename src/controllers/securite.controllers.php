@@ -2,11 +2,11 @@
 <?php
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."users.models.php");
 
-
+// var_dump($_REQUEST["action"]);
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
-    if (isset($_POST["action"])) {
-        if ($_POST["action"]=="connexion") {
-            // die ("djjffjj");
+    if (isset($_REQUEST["action"])) {
+        if ($_REQUEST["action"]=="connexion") {
+                // die('ok');
             // echo "traiter le formulaire de conexion";
             $login=$_POST['login'];
             $password=$_POST['password'];
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 if ($_SERVER["REQUEST_METHOD"]=="GET") {
     if (isset($_GET["action"])) {
         if ($_GET["action"]=="connexion") {
-            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
+        require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
             
 
             // echo "charger la page de connexion";

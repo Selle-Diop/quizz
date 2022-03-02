@@ -6,6 +6,6 @@
     <link rel="stylesheet" href="<?=WEB_PUBLIC.'css'.DIRECTORY_SEPARATOR.'style.accueil.css'?>">
     <link rel="stylesheet" href="<?=WEB_PUBLIC.'css'.DIRECTORY_SEPARATOR.'style.connexion.css'?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> 
 </head>
 <body>

@@ -1,3 +1,83 @@
-.tete{
-  background-color: red;
+#conteneur{
+  display: flex;
+  flex-direction: column;
+}
+.entete{
+  border: 3px solid red;
+  background-color: rgb(81,191,208);
+  position: relative;
+}
+.entete h1{
+  text-align: center;
+}
+button{
+  position: absolute;
+  right: 6%;
+  top: 18%;
+  padding: 1%;
+  background-color: rgb(81,191,208);
+  /* border: none; */
+}
+.listetof{
+  border: 3px solid green;
+  width: 40%;
+  height: 70vh;
+  margin-top: 4%;
+
+}
+.questionListe{
+  border: 3px solid violet;
+}
+.contjeu{
+  display: flex;
+}
+img{
+  border-radius: 100%;
+}
+.tof{
+  background-color:rgb(81,191,208) ;
+  padding: 6%;
+  /* display: flex; */
+}
+.tof p{
+  /* margin-left: 20%; */
+   /* margin-top: 10%;  */
+   
+}
+.lisquestion{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  margin-right: 1%;
+
+}
+.creer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  margin-top: 7%;
+  margin-right: 1%;
+
+}
+.lisJoueur{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  margin-top: 7%;
+  margin-right: 1%;
+
+}
+.creerQuest
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  margin-top: 7%;
+  margin-right: 1%;
+}
+.liste{
+  /* display: flex;
+  flex-direction: column;
+  align-content: space-between; */
+  margin-top: 5%;
 }

@@ -65,7 +65,7 @@
     
 
 //     checkRequired([ login, password]);
-//     //
+
 //     // checkLength(login, 3, 15);
 //     // checkLength(password, 6, 25);
 //     checkEmail(login);
