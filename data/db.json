@@ -4,7 +4,7 @@
         {
         "Nom": "Diop",
         "Prenom": "Selle",
-        "password":"joeur",
+        "password":"joueur",
         "login" : "joueur@gmail.com",
         "role":"Role_JOUEUR",
         "Score": 15
