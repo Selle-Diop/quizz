@@ -64,13 +64,13 @@ function checkPasswordMatch(input1, input2) {
 form.addEventListener('submit',function(e){
     //  e.preventDefault();//Bloquer la soumission du formulaire
     
-
+// alert('ok');
     checkRequired([ email, password]);
-    //
-    // checkLength(username, 3, 15);
+    
+    
     checkLength(password, 6, 25);
     checkEmail(email);
-    // checkPasswordMatch(password,password2);
+    
 
 
     /*

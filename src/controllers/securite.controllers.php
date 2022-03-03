@@ -56,7 +56,9 @@ function connexion($login,$password)
         exit(); 
     }else{
         // utilisateur n'existe pas
-        $errors['connexion']="champs obligatoire";
+        $errors['connexion']="login est obligatoire";
+        $errors['password']="password est obligatoire";
+
         $_SESSION[KEY_ERRORS]=$errors;
         header("location:".WEB_ROOT."?controller=securite&action=connexion");
         exit();
