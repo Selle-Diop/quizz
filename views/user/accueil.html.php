@@ -18,7 +18,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
     <div class="contjeu">
         <div class="listetof">
        <div class="tof">
-       <p> AAAAa</p>
+       <!-- <p> AAAAa</p> -->
         <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="19%">
         
         </div>
