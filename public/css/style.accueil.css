@@ -10,7 +10,7 @@
 .entete h1{
   text-align: center;
 }
-button{
+.entete button{
   position: absolute;
   right: 6%;
   top: 18%;
@@ -26,16 +26,15 @@ button{
   margin-top: 4%;
    /* padding: 1%;  */
 
-}
-.questionListe{
-  /* border: 3px solid violet; */
-}
+}   
+
 .contjeu{
   display: flex;
+  /* justify-content: space-between; */
 }
 img{
   border-radius: 100%;
-  padding: 3%;
+   padding: 3%; 
   margin-left: 6%;
 }
 .tof{
@@ -94,4 +93,35 @@ img{
   flex-direction: column;
   align-content: space-between; */
   margin-top: 5%;
+}
+.questionListe{
+  border: 3px solid violet; 
+   width: 50%;  
+  margin-left: 3%;
+   margin-top: 2%; 
+   display: flex;
+   flex-direction: column;
+}
+.nombredequestion{
+  border: 2px solid violet;
+   text-align: center; 
+  flex: 1;
+  
+  
+}
+.ok{
+  margin-top: 3%;
+  margin-left: 12%;
+}
+.lesquestions{
+  border: 2px solid red;
+  flex: 7;
+  width: 70%;
+  margin-left: 15%;
+  
+}
+.suivant{
+  border: 2px solid gold;
+  flex: 1;
+
 }

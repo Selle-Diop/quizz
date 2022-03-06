@@ -1,34 +1,43 @@
-<!-- <?php
+ <!-- <?php
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
-?> -->
+?>  -->
+<!-- Page Layout ou page de presentation -->
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="<?=WEB_PUBLIC.'css'.DIRECTORY_SEPARATOR.'style.accueil.css'?>">
- <!-- <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>  -->
+ 
 <div id="conteneur"> 
     <div class="entete">
         <h1>Creer et Parametrer vos Quizz</h1>
-        <button>Deconnexion</button>
+                <button> 
+     <a href="<?=WEB_ROOT."?controller=securite&action=deconnexion" ?> ">Deconnexion </a>
+
+                </button>
   </div>
     <div class="contjeu">
         <div class="listetof">
-       <div class="tof">
-       <!-- <p> AAAAa</p> -->
-        <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="19%">
+                <div class="tof">
+                        <div> AAAaaaf</div>
+                        <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="19%">
         
-        </div>
+                </div>
     <div class="liste">
-      
-        <div class="lisquestion"> Liste question <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste-active.png" ?>" alt="" height="69%"></div> </div>
-        <div class="creer"> Creer admin <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-ajout.png" ?>" alt="" height="69%"></div>  </div>
-        <div class="lisJoueur">Liste joueurs <div> <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste.png" ?>" alt="" height="69%"></div> </div>
-        <div class="creerQuest">Creer Questions <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-ajout.png" ?>" alt="" height="69%"></div> </div>
-      
+     
+        <?php if(is_admin()):?>
+            <div class="lisquestion"><a href="<?=WEB_ROOT."?controller=user&action=liste.question"?>">Liste question</a> <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste-active.png" ?>" alt="" height="69%"></div> </div>
+        <?php endif?>
+
+        <?php if(is_admin()):?>
+            <div class="creer"><a href="<?=WEB_ROOT."?controller=user&action=creation.admin"?>"> Creer admin </a> <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-ajout.png" ?>" alt="" height="69%"></div>  </div>
+        <?php endif ?>
+
+        <?php if (is_admin()): ?>
+            <div class="lisJoueur"><a href="<?=WEB_ROOT."?controller=user&action=liste.joueur"?>">Liste joueurs</a> <div> <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste.png" ?>" alt="" height="69%"></div> </div>
+        <?php endif ?>
+
+        <?php if(is_admin()):?>
+            <div class="creerQuest"><a href="<?=WEB_ROOT."?controller=user&action=creation.question"?>">Creer Questions</a> <div><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-ajout.png" ?>" alt="" height="69%"></div> </div>
+        <?php endif ?>
     </div>
 
   </div>
@@ -39,10 +48,19 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 
 
 
-    <div class="questionListe"></div>
+            <div class="questionListe">
+
+               <?= $affiche ?>
 
 
-    </div>
+
+            </div>
+
+
+    
+
+
+</div>
       
 
       
@@ -50,10 +68,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 
 </div>
 
-<!-- <div class="tete">
-  <img src="<?=WEB_PUBLIC.'css'.DIRECTOR_SEPARATOR.'logo-QuizzSA.png'?>" alt=""> 
-  <h1>dffd</h1>
-   </div> -->
+
 <?php
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.inc.html.php");
 ?>

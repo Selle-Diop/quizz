@@ -6,9 +6,13 @@ const password = document.getElementById('password');
 //Functions-------------------------------------------------------------
 function showError(input, message) {//Afficher les messages d'erreur
     const formControl = input.parentElement;
+    
     formControl.className = 'form-control error';
-    const small = formControl.querySelector('small');
+    const small = document.getElementById('small');
+    
     small.innerText = message;
+    small.style.color = 'red'
+   
 }
 //
 function showSuccess(input) {
@@ -21,17 +25,22 @@ function checkEmail(input) {//Tester si l'email est valide :  javascript : valid
 
     if (re.test(input.value.trim().toLowerCase())) {
         showSuccess(input);
+      return true
     } else {
         showError(input,`Email is not valid!`);
+        return false;
     }
 }
 //
+
 function checkRequired(inputArray) {// Tester si les champs ne sont pas vides
     inputArray.forEach(input => {
         if (input.value.trim() === '') {
             showError(input,`${getFieldName(input)} is required`);
+            return false;
         }else{
             showSuccess(input);
+            return true;
         }
     });
 }
@@ -43,6 +52,7 @@ function getFieldName(input) {//Retour le nom de chaque input en se basant sur s
 function checkLength(input, min, max) {//Tester la longueur de la valeur  d'un input
     if(input.value.length < min){
         showError(input, `${getFieldName(input)} must be at least ${min} characters!`)
+
     }else if(input.value.length > max){
         showError(input, `${getFieldName(input)} must be less than ${max} characters !`);
     }else{
@@ -53,6 +63,7 @@ function checkLength(input, min, max) {//Tester la longueur de la valeur  d'un i
 function checkPasswordMatch(input1, input2) {
     if (input1.value !== input2.value) {
         showError(input2, 'Passwords do not match!');
+
     }
 }
 
@@ -61,15 +72,20 @@ function checkPasswordMatch(input1, input2) {
 
 
 //Even listeners--------------------------------------------------------
-form.addEventListener('submit',function(e){
-    //  e.preventDefault();//Bloquer la soumission du formulaire
+// form.addEventListener('submit',function(e){
+    //    e.preventDefault();//Bloquer la soumission du formulaire
     
-// alert('ok');
-    checkRequired([ email, password]);
+//  alert('ok');
+   if( !checkRequired([ email, password])){
+    e.preventDefault();
+   }
     
     
     checkLength(password, 6, 25);
-    checkEmail(email);
+    
+    if(!checkEmail(email) ){
+        e.preventDefault();
+    }
     
 
 
