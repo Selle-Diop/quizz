@@ -1,123 +1,56 @@
 const form = document.getElementById('form');
-const email = document.getElementById('email');
+const login = document.getElementById('email');
 const password = document.getElementById('password');
+// const small = document.querySelector('small');
 
-
-//Functions-------------------------------------------------------------
-function showError(input, message) {//Afficher les messages d'erreur
-    const formControl = input.parentElement;
-    
-    formControl.className = 'form-control error';
-    const small = document.getElementById('small');
-    
-    small.innerText = message;
-    small.style.color = 'red'
-   
-}
-//
-function showSuccess(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success'; 
-}
-//
-function checkEmail(input) {//Tester si l'email est valide :  javascript : valid email
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    if (re.test(input.value.trim().toLowerCase())) {
-        showSuccess(input);
-      return true
+function checkfield(input) {
+    if (input.value == "") {
+        return input.name + " obligatoire";
     } else {
-        showError(input,`Email is not valid!`);
-        return false;
-    }
-}
-//
-
-function checkRequired(inputArray) {// Tester si les champs ne sont pas vides
-    inputArray.forEach(input => {
-        if (input.value.trim() === '') {
-            showError(input,`${getFieldName(input)} is required`);
-            return false;
-        }else{
-            showSuccess(input);
-            return true;
+        if (input.name == "login") {
+            const re =
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (input.value.match(re)) {
+                return "";
+            }
+            return "email est invalide";
         }
-    });
-}
-//
-function getFieldName(input) {//Retour le nom de chaque input en se basant sur son id
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-//
-function checkLength(input, min, max) {//Tester la longueur de la valeur  d'un input
-    if(input.value.length < min){
-        showError(input, `${getFieldName(input)} must be at least ${min} characters!`)
+        if (input.name == "password") {
+            if (input.value.length < 6) {
+                return "le mot de passe doit contenir 6 chiffres";
+            } else {
+                const letter = /[a-zA-Z]/;
+                const number = /[0-9]/;
+                if (input.value.length < min || !letter.test(input) || !number.test(input)) {
 
-    }else if(input.value.length > max){
-        showError(input, `${getFieldName(input)} must be less than ${max} characters !`);
-    }else{
-        showSuccess(input);
-    }
-}
-//
-function checkPasswordMatch(input1, input2) {
-    if (input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match!');
 
-    }
+                    return "Mot de passe au requiert au moins un chiffre ou une lettre";
+                } return '';
+            }
+        } return '';
+    } return '';
 }
 
+form.addEventListener('submit', (e) => {
 
 
 
-
-//Even listeners--------------------------------------------------------
-// form.addEventListener('submit',function(e){
-    //    e.preventDefault();//Bloquer la soumission du formulaire
-    
-//  alert('ok');
-   if( !checkRequired([ email, password])){
-    e.preventDefault();
-   }
-    
-    
-    checkLength(password, 6, 25);
-    
-    if(!checkEmail(email) ){
+    var erreurLogin = checkfield(login);
+    if (erreurLogin !== '') {
         e.preventDefault();
+        login.className = 'erreur';
+        const small = login.parentElement.getElementsByTagName('small')[0];
+        small.innerText = erreurLogin;
+        small.style.visibility = 'visible';
     }
-    
-
-
-    /*
-    function isValidEmail(email) {//Tester si l'email est valide
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-    if (username.value === '') {
-       showError(username,'Username is required!'); 
-    }else{
-        showSuccess(username);
-    }
-
-    if (email.value === '') {
-       showError(email,'Email is required!'); 
-    }else if(!isValidEmail(email.value)){
-        showError(email,'Email is not valid!');
-    }else{
-        showSuccess(email);
+    var erreurPassword = checkfield(password);
+    if (erreurPassword !== '') {
+        e.preventDefault();
+        password.className = 'erreur';
+        const small = password.parentElement.getElementsByTagName('small')[0];
+        small.innerText = erreurPassword;
+        small.style.visibility = 'visible';
     }
 
-    if (password.value === '') {
-       showError(password,'password is required!'); 
-    }else{
-        showSuccess(password);
-    }
-
-    if (password2.value === '') {
-       showError(password2,'Password 2 is required!'); 
-    }else{
-        showSuccess(password2);
-    }*/
 });
 

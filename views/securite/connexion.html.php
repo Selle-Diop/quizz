@@ -3,16 +3,13 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 if (isset($_SESSION[KEY_ERRORS])) {
     $errors = $_SESSION[KEY_ERRORS];
     unset($_SESSION[KEY_ERRORS]);
-    var_dump( $errors);
+    // var_dump( $errors);
 }
 
 
 
 ?>
- <div class="header"> 
-    <div class="logo"></div>
-    <div class="ff">Le plaisir de jouer</h1></div>
- </div>  
+   
     
     <div class="container"> 
         <form class="form" action="<?=WEB_ROOT?>" id="form" method="POST">
@@ -41,14 +38,18 @@ if (isset($_SESSION[KEY_ERRORS])) {
             <div class="form-control">
                 <input type="password" id="password" placeholder="Password" name="password">
                 <small id="small">Error message</small>
-                <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-password.png" ?>" alt="" width="5%" height="-1%">
+                <img class="img" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-password.png" ?>" alt="" width="5%" height="-1%">
                 <?php if (isset($errors['password'])):?>
                 <p style="color:red"> <?=$errors['password']; ?> </p>
             <?php endif?>
             </div>
-            <div class="connect">
-                <input type="submit" value="Connexion" id="connexion">
-                <input type="submit" value="S'inscrire pour jouer" id="inscription">
+            <div class="connection">
+                <!-- <input type="submit" value="Connexion" id="connexion"> -->
+                <button id="connexion">connexion</button>
+                
+                <button id="inscrire"><a href="<?=WEB_ROOT."?controller=user&action=inscription.joueur" ?>"> S'inscrire pour jouer</a></button>
+                
+                <!-- <input type="submit" value="S'inscrire pour jouer" id="inscription"> -->
             </div>
         
           

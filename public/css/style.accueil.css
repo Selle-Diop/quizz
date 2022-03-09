@@ -1,11 +1,17 @@
 #conteneur{
   display: flex;
   flex-direction: column;
+   /* border: 3px solid red;  */
+   margin-top:1%;
+  height: 120vh;
+  background-color: white; 
+  
 }
 .entete{
   /* border: 3px solid red; */
   background-color: rgb(81,191,208);
   position: relative;
+  height: 7%;
 }
 .entete h1{
   text-align: center;
@@ -13,46 +19,53 @@
 .entete button{
   position: absolute;
   right: 6%;
-  top: 18%;
+  top: -150%;
   padding: 1%;
+  font-size: 2rem;
   background-color: rgb(81,191,208);
-  /* border: none; */
+  text-decoration: none; 
 }
 .listetof{
-   border: 1px solid green; 
-   border-radius: 2%;
+     border: 1px solid rgb(81,191,208);   
+   /* border-radius: 2%; */
   width: 40%;
   height: 70vh;
-  margin-top: 4%;
+  margin-top: 3%; 
+  margin-left: 2%; 
    /* padding: 1%;  */
 
 }   
 
 .contjeu{
   display: flex;
+  /* border:3px solid green; */
   /* justify-content: space-between; */
+
 }
-img{
+.tof img{
   border-radius: 100%;
-   padding: 3%; 
-  margin-left: 6%;
+   /* padding: 1%;   */
+  margin-left: 13%; 
+  width: 20%;
 }
 .tof{
-    border: 1px solid rgb(81,191,208); 
-   border-radius: 4%; 
+     /* border: 1px solid red;   */
+   /* border-radius: 4%;  */
   background-color:rgb(81,191,208) ;
-   /* padding: -1%;   */
-  width: 100%;
-  /* display: flex; */
-}
- p{
-    /* margin-left: 23%;   */
-    /* margin-top: 7%;  */
-   /* font-size: 1em;  */
-    /* text-align: center;  */
+
+  
     
-   
+   /* width: 100%;  */
+  /* display: flex; */ 
 }
+ /* p
+    margin-left: 23%;  
+     margin-top: 7%;  
+    font-size: 1em;  
+     text-align: center;  
+    
+    */
+
 .lisquestion{
   display: flex;
   justify-content: space-between;
@@ -95,15 +108,19 @@ img{
   margin-top: 5%;
 }
 .questionListe{
-  border: 3px solid violet; 
-   width: 50%;  
+   /* border: 3px solid violet;  */
+   width: 65%;  
   margin-left: 3%;
-   margin-top: 2%; 
+   /* margin-top: 1%;   */
    display: flex;
-   flex-direction: column;
+   flex-direction: column; 
+   margin-left: 3%;
+   /* height: auto;
+   width: auto;
+    border: 2px solid red;  */
 }
 .nombredequestion{
-  border: 2px solid violet;
+  /* border: 2px solid violet; */
    text-align: center; 
   flex: 1;
   
@@ -121,7 +138,7 @@ img{
   
 }
 .suivant{
-  border: 2px solid gold;
+  /* border: 2px solid gold; */
   flex: 1;
 
 }

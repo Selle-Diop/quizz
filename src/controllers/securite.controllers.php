@@ -5,18 +5,21 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."users.models.php");
 // var_dump($_REQUEST["action"]);
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
     if (isset($_POST["action"])) {
+        // die('ok');
         if ($_POST["action"]=="connexion") {
-                // die('ok');
             // echo "traiter le formulaire de conexion";
             $login=$_POST['login'];
             $password=$_POST['password'];
              connexion($login,$password);
+             
         }
+        elseif ($_POST["action"]=="inscription.joueur"){
+             header('location'.WEB_ROOT.'?controller=securite&action=inscription.joueur');
+             exit();
+        }
+
         
     }
-    
-        
-    
     
 }
 if ($_SERVER["REQUEST_METHOD"]=="GET") {
@@ -53,6 +56,7 @@ function connexion($login,$password)
     
    Champ_Obligatoire('password',$password,$errors,"Password est obligatoire");
    if(count($errors)==0) {
+    Valid_Password('password',$password,$errors,"veuillez saisir un password de plus 6 chiffres");
             // appel d'une function model
             $user=find_user__password($login,$password);
             if (count($user)!=0) {
@@ -86,4 +90,5 @@ function logout(){
 
     exit();
 }
+
 

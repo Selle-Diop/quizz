@@ -1,6 +1,6 @@
- <!-- <?php
+  <?php
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
-?>  -->
+?>  
 <!-- Page Layout ou page de presentation -->
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
         <div class="listetof">
                 <div class="tof">
                         <div> AAAaaaf</div>
-                        <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="19%">
+                        <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="1%">
         
                 </div>
     <div class="liste">

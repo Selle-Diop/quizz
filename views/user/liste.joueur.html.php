@@ -6,12 +6,13 @@
         <th>Prenom</th>
         <th>Score</th>
     </tr>
-    <?php foreach($data as $value) : ?>
+    <?php 
+     foreach($data as $value) : ?>
     <tr>
      
-        <td> $value['nom'] </td>
-        <td> $value['prenom'] </td>
-        <td> $value['score'] </td>
+        <td> <?=$value['Nom']?> </td>
+        <td><?= $value['Prenom'] ?></td>
+        <td><?= $value['Score']?> </td>
     </tr>
     <?php endforeach ?>
 

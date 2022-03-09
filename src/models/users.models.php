@@ -14,7 +14,7 @@ function find_users(string $role):array{
     $result=[];
     foreach ($users as $user) {
         if ($user['role']==$role) {
-            $result[]=$role;
+            $result[]=$user;
         // var_dump($result);
         }
             

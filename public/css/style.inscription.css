@@ -1,0 +1,100 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+.form-control small {
+  color: var(--error-color);
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+ .error {
+  border: 2px solid #ff0000;
+  background-color: #ffcaca;
+  box-shadow: 0px 0px 3px 3px #f7020a;
+} 
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.avatar p {
+  font-size: 1.6em;
+}
+.contain {
+  background-color: white;
+  /* border:2px solid red; */
+  margin-left: 10%;
+  width: 70%;
+  height: 100vh;
+  /* margin-top: 4%; */
+}
+.header {
+  /* border:2px solid red; */
+  height: 10vh;
+  color: white;
+  background-color: rgb(5, 36, 38);
+  display: flex;
+  position: relative;
+}
+h1,
+p {
+  margin-left: 2%;
+}
+input {
+  height: 5vh;
+  width: 60%;
+}
+button {
+  padding: 2%;
+  background-color: rgb(81, 191, 208);
+  font-size: 0.7em;
+}
+.pre {
+  font-size: 2em;
+  margin-left: 30%;
+  margin-top: 38%;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 4%;
+}
+.ff {
+  margin-left: 40%;
+  margin-top: 1%;
+  font-size: 2.4rem;
+}
+.logoQuizz img {
+  position: absolute;
+  top: 0;
+  left: 3%;
+}
+.sinscrire {
+  /* border:2px solid green;    */
+  /* width:65%; */
+  /* margin-left: 3%; */
+
+  height: 80vh;
+}
+.avatar {
+  /* border:2px solid violet; */
+  margin-left: 16%;
+  margin-top: 10%;
+}
+.avatar img {
+  border-radius: 100%;
+  border: 8px solid rgb(81, 191, 208);
+  margin-top: 4%;
+  margin-right: 6%;
+  margin-left: 2%;
+}
+.contain {
+  display: flex;
+}
