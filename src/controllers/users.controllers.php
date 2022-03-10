@@ -18,17 +18,21 @@ if ($_SERVER["REQUEST_METHOD"]=="GET") {
         if ($_REQUEST["action"]=="accueil") {
              if (is_admin()){
               liste_des_Joueur();
+              
+              header('location:'.WEB_ROOT.'?controller=user&action=liste.joueur');
+                 exit();
                 
              }
             elseif (is_joueur()) {
                  afficherJoueur();
+                 
              }
             
             //  require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
         }
         if($_REQUEST["action"]== "liste.joueur"){
             liste_des_Joueur();
-            // lister_lesjoueurs ();
+            
         }
        
         if($_REQUEST["action"]== "liste.question"){
@@ -41,17 +45,10 @@ if ($_SERVER["REQUEST_METHOD"]=="GET") {
             creationadmin ();
         }
         if($_REQUEST["action"]== "inscription.joueur"){
-           /* echo '<pre>';
-           var_dump($_POST);
-           echo '</pre>';
-            die(); */
+           
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
-//    $prenom=$_POST['prenom'];   
-//    $nom=$_POST['nom'];
-//    $login=$_POST['login'];  
-//    $password=$_POST['password'];   
-//    $password2=$_POST['password2'];           
-//     inscription ($prenom,$nom,$login,$password,$password2);
+
+     
             
     require_once(PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'inscription.html.php');
             
@@ -64,12 +61,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 
 // ---------------------------------Fonctions-------------------------------------
  
-// function lister_lesjoueurs (){
-//     //  appel du model
-//     $data=find_users(Role_JOUEUR);
-//     require_once(PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'liste.joueur.html.php');
 
-//  }
 
 function liste_des_Joueur(){
      ob_start();
@@ -98,6 +90,7 @@ function creationquestion(){
     require_once (PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'accueil.html.php');
     
 }
+
 function creationadmin (){
     ob_start();
     require_once(PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'inscription.html.php');
@@ -105,6 +98,7 @@ function creationadmin (){
     require_once (PATH_VIEWS.'user'.DIRECTORY_SEPARATOR.'accueil.html.php');
     
 }
+
 function inscription ($prenom,$nom,$login,$password,$password2,$role){
     
  $errors=[];
@@ -121,11 +115,11 @@ function inscription ($prenom,$nom,$login,$password,$password2,$role){
             $score=0;
             $newUsers=array(
                 "Nom"=> $nom,
-        "Prenom"=>$prenom,
-        "password"=>$password,
-        "login" =>$login,
-        "role"=>$role,
-        "Score"=> $score,
+            "Prenom"=>$prenom,
+            "password"=>$password,
+            "login" =>$login,
+            "role"=>$role,
+            "Score"=> $score,
 
 
             );

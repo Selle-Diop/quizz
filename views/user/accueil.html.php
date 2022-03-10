@@ -17,7 +17,12 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
     <div class="contjeu">
         <div class="listetof">
                 <div class="tof">
-                        <div> AAAaaaf</div>
+                        <div><?=
+                        $_SESSION[KEY_USER_CONNECT]['Nom']." ".
+                        $_SESSION[KEY_USER_CONNECT]['Prenom'];
+                        
+                            ?>
+                        </div>
                         <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."hussary.jpg" ?>" alt="" height="1%">
         
                 </div>

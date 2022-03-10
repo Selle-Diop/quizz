@@ -9,11 +9,11 @@
 .form-control.error small {
   visibility: visible;
 }
- .error {
+.error {
   border: 2px solid #ff0000;
   background-color: #ffcaca;
   box-shadow: 0px 0px 3px 3px #f7020a;
-} 
+}
 
 .form-control.success input {
   border-color: var(--success-color);
@@ -45,6 +45,9 @@ h1,
 p {
   margin-left: 2%;
 }
+.form-control input {
+  height: 2vh;
+}
 input {
   height: 5vh;
   width: 60%;
@@ -64,7 +67,7 @@ form {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  margin-top: 4%;
+  margin-top: -7%;
 }
 .ff {
   margin-left: 40%;
@@ -77,9 +80,10 @@ form {
   left: 3%;
 }
 .sinscrire {
-  /* border:2px solid green;    */
+   /* border: 2px solid green;  */
   /* width:65%; */
-  /* margin-left: 3%; */
+  margin-left: -15%;
+  margin-top: -2%;
 
   height: 80vh;
 }
@@ -92,9 +96,13 @@ form {
   border-radius: 100%;
   border: 8px solid rgb(81, 191, 208);
   margin-top: 4%;
-  margin-right: 6%;
-  margin-left: 2%;
+  margin-left: -30%;
+  width: 250%;
+  margin-left: 1%;
+
+  border: 3px solid red;
 }
+
 .contain {
   display: flex;
 }

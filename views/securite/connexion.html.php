@@ -28,7 +28,7 @@ if (isset($_SESSION[KEY_ERRORS])) {
             <div class="form-control">
                 <input type="text" id="email" placeholder="Login" name="login">
                 
-                 <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-login.png" ?>" alt="" width="5%" height="-1%">
+                 <!-- <img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-login.png" ?>" alt="" width="5%" height="-1%"> -->
                  <small id="small">Error message</small>
                  <?php if (isset($errors['login'])):?>
             
@@ -38,7 +38,7 @@ if (isset($_SESSION[KEY_ERRORS])) {
             <div class="form-control">
                 <input type="password" id="password" placeholder="Password" name="password">
                 <small id="small">Error message</small>
-                <img class="img" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-password.png" ?>" alt="" width="5%" height="-1%">
+                <!-- <img class="img" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-password.png" ?>" alt="" width="5%" height="-1%"> -->
                 <?php if (isset($errors['password'])):?>
                 <p style="color:red"> <?=$errors['password']; ?> </p>
             <?php endif?>

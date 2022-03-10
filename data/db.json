@@ -1,180 +1,212 @@
 {
-    "users":[
-
+    "users": [
         {
-        "Nom": "Diop",
-        "Prenom": "Selle",
-        "password":"joueur",
-        "login" : "joueur@gmail.com",
-        "role":"Role_JOUEUR",
-        "Score": 15
-
-
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
         },
         {
             "Nom": "Diop",
             "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
             "Score": 15
-    
-    
-            }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-        
-        
-         }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-            
-            
-        }, 
-        {
-             "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                
-                
         },
         {
-             "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                    
-                    
-         }, 
-         {
             "Nom": "Diop",
             "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
             "Score": 15
-                        
-                        
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                            
-                            
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                
-                                
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-             "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                    
-                                    
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-             "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                        
-                                        
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                            
-                                            
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                                
-                                                
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                                    
-                                                    
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                                        
-                                                        
-        }, 
-        {
-            "Nom": "Diop",
-            "Prenom": "Selle",
-            "password":"joueur",
-            "login" : "joueur@gmail.com",
-            "role":"Role_JOUEUR",
-            "Score": 15
-                                                            
-                                                            
         },
         {
-            "Nom": "Faye",
-            "Prenom": "Astou",
-            "password":"admin",
-            "login" : "admin@gmail.com",
-            "role":"Role_ADMIN",
-            "Score":0
-    
-    
-            }
-
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "Diop",
+            "Prenom": "Selle",
+            "password": "joueur",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 15
+        },
+        {
+            "Nom": "DIOP",
+            "Prenom": "Selle",
+            "password": "admine11",
+            "login": "admin@gmail.com",
+            "role": "Role_ADMIN",
+            "Score": 0
+        },
+        {
+            "Nom": "bbbbbbbb",
+            "Prenom": "bbbb",
+            "password": "bbbbbbbbb",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "ddddddddddd",
+            "Prenom": "aaaaaaaad",
+            "password": "eeeeeee",
+            "login": "joueur@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "aaaaaaa",
+            "Prenom": "zzzzzzzz",
+            "password": "admine12",
+            "login": "admine@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "fall",
+            "Prenom": "adama",
+            "password": "adama123",
+            "login": "admin234@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "eeeeeee",
+            "Prenom": "reelll",
+            "password": "123diop",
+            "login": "adminer12@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "dddddd",
+            "Prenom": "ddddddd",
+            "password": "azerty123",
+            "login": "zezzeeeeee@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "tttttt",
+            "Prenom": "rrrrrrrr",
+            "password": "repeter12",
+            "login": "admintt@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "aaaaaaa",
+            "Prenom": "aaaaaaaa",
+            "password": "admin23",
+            "login": "admin23@gmail.com",
+            "role": "Role_JOUEUR",
+            "Score": 0
+        },
+        {
+            "Nom": "azeee",
+            "Prenom": "aaaaazz",
+            "password": "a123456",
+            "login": "zzzgzf@gmail.com",
+            "role": "Role_ADMIN",
+            "Score": 0
+        }
     ]
-
-
-
-
 }

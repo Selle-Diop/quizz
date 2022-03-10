@@ -23,7 +23,7 @@ function checkfield(input) {
             } else {
                 const letter = /[a-zA-Z]/;
                 const number = /[0-9]/;
-                if (input.value.length < 6 || !letter.test(input) || !number.test(input)) {
+                if (input.value.length < 6 || !letter.test(input.value) || !number.test(input.value)) {
 
                     return "Mot de passe doit requerir au moins un chiffre ou une lettre";
                 } return '';
@@ -32,8 +32,8 @@ function checkfield(input) {
     } return '';
 }
 function checkPassword(password1, password2) {
-    if (password1 !== password2) {
-        return 'mot de passe differents';
+    if (password1.value !== password2.value) {
+        return 'les mots de passe differents';
     } return '';
 }
 forme.addEventListener('submit', (e) => {
@@ -79,17 +79,17 @@ forme.addEventListener('submit', (e) => {
         small.innerText = erreurPassword2;
         small.style.visibility = 'visible';
     }
-    // var Password = checkPassword(apassword1, apassword2);
-    // if (password !== '') {
-    //     e.preventDefault();
-    //     apassword1.className = 'error';
-    //     apassword2.className = 'error';
-    //     const small = apassword2.parentElement.getElementsByTagName('small')[0];
-    //     small.innerText = erreurPassword2;
-    //     small.style.visibility = 'visible';
+    var Password = checkPassword(apassword1, apassword2);
+    if (Password !== '') {
+        e.preventDefault();
+        apassword1.className = 'error';
+        apassword2.className = 'error';
+        const small = apassword2.parentElement.getElementsByTagName('small')[0];
+        small.innerText = Password;
+        small.style.visibility = 'visible';
 
 
-    // }
+    }
 });
 
 

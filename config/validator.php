@@ -40,10 +40,14 @@ function checkValue ($key,$data,array &$errors){
     }
 }
 function matchPassword ($password1,$password2,$key,array &$errors){
-if($password1=='' && $password2=='' ){
+if($password1 !=='' && $password2 !=='' ){
     if($password1 !== $password2){
         $errors[$key]= 'les mots de passent sont differents';
     }
 
 }
+}
+
+function uploadimage($input){
+
 }

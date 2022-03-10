@@ -14,8 +14,17 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
              
         }
         elseif ($_POST["action"]=="inscription.joueur"){
-             header('location'.WEB_ROOT.'?controller=securite&action=inscription.joueur');
-             exit();
+
+            $prenom=$_POST['prenom'];   
+          $nom=$_POST['nom'];
+       $login=$_POST['login'];  
+     $password=$_POST['password'];   
+     $password2=$_POST['password2']; 
+     $role=Role_JOUEUR;
+     if(is_admin()) $role=Role_ADMIN; 
+
+       inscription($prenom,$nom,$login,$password,$password2,$role);
+
         }
 
         
@@ -56,7 +65,7 @@ function connexion($login,$password)
     
    Champ_Obligatoire('password',$password,$errors,"Password est obligatoire");
    if(count($errors)==0) {
-    Valid_Password('password',$password,$errors,"veuillez saisir un password de plus 6 chiffres");
+    // Valid_Password('password',$password,$errors,"veuillez saisir un password de plus 6 chiffres");
             // appel d'une function model
             $user=find_user__password($login,$password);
             if (count($user)!=0) {
@@ -83,6 +92,68 @@ function connexion($login,$password)
         }
     
 }
+function inscription ($prenom,$nom,$login,$password,$password2,$role){
+    
+ $errors=[];
+   Champ_Obligatoire ('prenom',$prenom,$errors);
+   Champ_Obligatoire ('nom',$nom,$errors);
+   Champ_Obligatoire ('email',$login,$errors);
+   Champ_Obligatoire ('password',$password,$errors);
+   Champ_Obligatoire ('password2',$password2,$errors);
+    matchPassword($password,$password2,'passwords',$errors);
+     if(find_user__login($login)){
+         $errors['erreurlogin']='cet utilisateur existe deja';
+        //  die('ok');
+         }
+         
+    if(count($errors)==0){
+        $users=find_user__password($login,$password);
+        if (is_admin()) {
+            header('location:'.WEB_ROOT.'?controller=user&action=accueil');
+            exit();
+        }
+        
+
+        if(count($users)==0){
+            $score=0;
+            $newUsers=array(
+            "Nom"=> $nom,
+            "Prenom"=>$prenom,
+            "password"=>$password,
+            "login" =>$login,
+            "role"=>$role,
+            "Score"=> $score,
+
+
+            );
+            
+            array_to_json('users',$newUsers);
+            $_SESSION[KEY_USER_CONNECT]=$newUsers;
+            //  var_dump($_SESSION[KEY_USER_CONNECT]);
+            header('location:'.WEB_ROOT.'?controller=securite&action=connexion');
+            exit();            
+
+        }
+        else{
+            // echo 'ok';die();
+            $_SESSION[KEY_ERRORS]=$errors;
+            
+            header('location:'.WEB_ROOT.'?controller=user&action=inscription.joueur');
+            exit();
+        }
+    }else {
+            $_SESSION[KEY_ERRORS]=$errors;
+            header('location:'.WEB_ROOT.'?controller=user&action=inscription.joueur');
+            exit();
+        
+    }
+
+
+
+
+}
+
+
 function logout(){
     session_destroy ();
     unset($_SESSION[KEY_ERRORS]);
@@ -90,5 +161,6 @@ function logout(){
 
     exit();
 }
+
 
 
